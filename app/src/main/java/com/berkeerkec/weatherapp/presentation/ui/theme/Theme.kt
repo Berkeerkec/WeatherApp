@@ -1,4 +1,4 @@
-package com.berkeerkec.weatherapp.weather.presentation.ui.theme
+package com.berkeerkec.weatherapp.presentation.ui.theme
 
 import android.app.Activity
 import android.os.Build

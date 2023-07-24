@@ -1,4 +1,4 @@
-package com.berkeerkec.data.remote
+package com.berkeerkec.weatherapp.data.remote
 
 import com.squareup.moshi.Json
 
