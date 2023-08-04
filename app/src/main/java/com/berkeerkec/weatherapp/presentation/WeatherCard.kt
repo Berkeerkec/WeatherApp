@@ -1,6 +1,7 @@
 package com.berkeerkec.weatherapp.presentation
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -12,6 +13,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardColors
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -24,20 +26,20 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.berkeerkec.weatherapp.R
+import com.berkeerkec.weatherapp.presentation.ui.theme.DeepBlue
 import java.time.format.DateTimeFormatter
 import kotlin.math.roundToInt
 
 @Composable
 fun WeatherCard(
     state: WeatherState,
-    backgroundColor : CardColors,
     modifier: Modifier = Modifier
 ){
     state.weatherInfo?.currentWeatherData?.let {data ->
         Card(
-            colors = backgroundColor,
             shape = RoundedCornerShape(10.dp),
-            modifier = modifier.padding(16.dp)
+            modifier = modifier.padding(16.dp),
+            colors = CardDefaults.cardColors(DeepBlue)
         ) {
             Column(
                 modifier = Modifier
